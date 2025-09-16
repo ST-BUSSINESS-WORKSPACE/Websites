@@ -1,0 +1,273 @@
+/* 🌞 Bright Professional Pricing Table */
+:root {
+    --basic: #8b5cf6;
+    /* purple */
+    --normal: #10b981;
+    /* green */
+    --advance: #f59e0b;
+    /* orange */
+    --bg: #f9fafb;
+    --card-bg: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --radius: 12px;
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--text);
+}
+
+.hero .lead {
+    margin-top: 12px;
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    margin: 40px 0;
+}
+
+/* Card */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* Headers for each package */
+.card h3 {
+    margin: 0;
+    padding: 18px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+.card:nth-child(1) h3 {
+    background: var(--basic);
+}
+
+.card:nth-child(2) h3 {
+    background: var(--normal);
+}
+
+.card:nth-child(3) h3 {
+    background: var(--advance);
+}
+
+/* Price */
+.price {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Details */
+.details {
+    list-style: none;
+    padding: 0 20px;
+    margin: 0 0 20px;
+    flex-grow: 1;
+}
+
+.details li {
+    margin-bottom: 10px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Button */
+.btn {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    padding: 12px;
+    font-weight: 600;
+    background: var(--text);
+    color: white;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #111827;
+}
+
+/* Rules */
+.rules {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-top: 40px;
+}
+
+.rules h2 {
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.rules h3 {
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+.rules li {
+    margin-bottom: 10px;
+    color: var(--muted);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin: 40px 0 10px;
+    color: var(--muted);
+}
+
+.footer a {
+    color: var(--basic);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Media Queries */
+
+/* Large Screens (≥1200px) */
+@media (min-width: 1200px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .grid {
+        gap: 40px;
+    }
+
+    .price {
+        font-size: 2.2rem;
+    }
+}
+
+/* Tablets (768px – 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .price {
+        font-size: 1.8rem;
+    }
+}
+
+/* Phones (<768px) */
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra Small Phones (<480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero .lead {
+        font-size: 0.9rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+        padding: 14px;
+    }
+
+    .price {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* Ultra Small (<320px) */
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero .lead {
+        font-size: 0.8rem;
+    }
+
+    .price {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
