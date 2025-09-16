@@ -1,0 +1,154 @@
+:root {
+    --bg: #0a0f0a;
+    --card-bg: #141d16;
+    --highlight: #1d2b20;
+    --green: #22c55e;
+    --green-dark: #15803d;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --radius: 14px;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--green);
+}
+
+.lead {
+    color: var(--muted);
+    max-width: 700px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--green);
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: var(--green);
+}
+
+.details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+    color: var(--muted);
+}
+
+.details li {
+    margin-bottom: 8px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: var(--green-dark);
+}
+
+.highlight {
+    border: 2px solid var(--green);
+    background: var(--highlight);
+}
+
+.rules {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.rules h3 {
+    margin-top: 0;
+    color: var(--green);
+}
+
+.rules ul {
+    padding-left: 20px;
+    color: var(--muted);
+}
+
+.footer {
+    text-align: center;
+    margin: 30px 0 10px;
+    color: var(--muted);
+}
+
+.footer a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+.rules ul{
+    line-height: 30px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.details{
+    font-size: 18px;
+    line-height: 40px;
+}
+.details li{
+    transition: all 0.2s ease ;
+    cursor: pointer;
+}
+.details li:hover{
+    background-color: rgb(172, 172, 172);
+    color: black;
+}
