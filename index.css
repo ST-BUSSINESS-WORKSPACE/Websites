@@ -93,6 +93,7 @@ body {
     cursor: pointer;
     font-size: 1rem;
     transition: background 0.2s;
+    text-align: center;
 }
 
 .btn:hover {
@@ -132,23 +133,394 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
-a{
-    text-decoration: none;
+
+/* 💻 Large Devices (Desktops & Wide Screens) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+        max-width: 900px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .card {
+        padding: 30px;
+        font-size: 1.05rem;
+    }
+
+    .price {
+        font-size: 2.2rem;
+    }
+
+    .details {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
+    .rules {
+        padding: 40px;
+        font-size: 1.1rem;
+    }
+
+    .footer {
+        font-size: 1.05rem;
+    }
 }
-.rules ul{
-    line-height: 30px;
-    font-size: 20px;
-    text-transform: capitalize;
+
+/* 📱 Tablets (768px – 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .price {
+        font-size: 1.6rem;
+    }
+
+    .details {
+        font-size: 0.95rem;
+    }
 }
-.details{
-    font-size: 18px;
-    line-height: 40px;
+
+/* 📱 Phones (less than 768px) */
+@media (max-width: 767px) {
+    .hero {
+        padding: 20px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .lead {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 1.4rem;
+    }
+
+    .details {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .rules {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
 }
-.details li{
-    transition: all 0.2s ease ;
-    cursor: pointer;
+
+/* 📲 Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 15px 8px;
+    }
+
+    .hero h1 {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+
+    .lead {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        padding: 0 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .card {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .details {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .rules {
+        font-size: 0.8rem;
+        padding: 12px;
+        line-height: 1.2rem;
+    }
+
+    .footer {
+        font-size: 0.7rem;
+    }
 }
-.details li:hover{
-    background-color: rgb(172, 172, 172);
-    color: black;
+
+/* 📟 Ultra Small Devices (max-width: 320px) */
+@media (max-width: 320px) {
+    .hero {
+        padding: 10px 5px;
+    }
+
+    .hero h1 {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .lead {
+        font-size: 0.7rem;
+        line-height: 1rem;
+        padding: 0 6px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .card {
+        padding: 10px;
+        font-size: 0.7rem;
+    }
+
+    .price {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+
+    .details {
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+        padding: 6px;
+    }
+
+    .rules {
+        font-size: 0.7rem;
+        padding: 10px;
+        line-height: 1rem;
+    }
+
+    .footer {
+        font-size: 0.65rem;
+    }
+}
+
+/* 📟 Super Tiny Devices (max-width: 300px) */
+@media (max-width: 300px) {
+    .hero h1 {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+
+    .lead {
+        font-size: 0.65rem;
+        line-height: 1rem;
+    }
+
+    .card {
+        padding: 8px;
+        font-size: 0.65rem;
+    }
+
+    .price {
+        font-size: 0.9rem;
+    }
+
+    .details {
+        font-size: 0.65rem;
+    }
+
+    .btn {
+        font-size: 0.65rem;
+        padding: 5px;
+    }
+
+    .footer {
+        font-size: 0.6rem;
+    }
+}
+
+/* 🕹️ Ultra Tiny Devices (max-width: 240px) */
+@media (max-width: 240px) {
+    .hero h1 {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    .lead {
+        font-size: 0.6rem;
+        line-height: 0.8rem;
+    }
+
+    .card {
+        padding: 6px;
+        font-size: 0.6rem;
+    }
+
+    .price {
+        font-size: 0.8rem;
+    }
+
+    .details {
+        font-size: 0.6rem;
+    }
+
+    .btn {
+        font-size: 0.6rem;
+        padding: 4px;
+    }
+
+    .rules {
+        font-size: 0.6rem;
+        line-height: 0.8rem;
+    }
+
+    .footer {
+        font-size: 0.55rem;
+    }
+}
+
+/* 🕹️ Extreme Fallback (max-width: 200px, 150px, 100px) */
+@media (max-width: 200px) {
+    .hero h1 {
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+    }
+
+    .lead {
+        font-size: 0.55rem;
+    }
+
+    .card {
+        padding: 5px;
+        font-size: 0.55rem;
+    }
+
+    .price {
+        font-size: 0.7rem;
+    }
+
+    .btn {
+        font-size: 0.55rem;
+        padding: 3px;
+    }
+
+    .footer {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 150px) {
+    .hero h1 {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    .lead {
+        font-size: 0.5rem;
+    }
+
+    .card {
+        padding: 4px;
+        font-size: 0.5rem;
+    }
+
+    .price {
+        font-size: 0.65rem;
+    }
+
+    .btn {
+        font-size: 0.5rem;
+        padding: 2px;
+    }
+
+    .footer {
+        font-size: 0.45rem;
+    }
+}
+
+@media (max-width: 100px) {
+    .hero h1 {
+        font-size: 0.7rem;
+        line-height: 0.9rem;
+    }
+
+    .lead {
+        font-size: 0.45rem;
+    }
+
+    .card {
+        padding: 3px;
+        font-size: 0.45rem;
+    }
+
+    .price {
+        font-size: 0.6rem;
+    }
+
+    .btn {
+        font-size: 0.45rem;
+        padding: 2px;
+    }
+
+    .footer {
+        font-size: 0.4rem;
+    }
 }
